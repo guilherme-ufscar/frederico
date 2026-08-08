@@ -1,0 +1,25 @@
+# Caddyfile — HTTPS automático com Let's Encrypt
+# TODO: apontar o DNS do domínio para o servidor antes de subir.
+
+advfredericoferreira.com, www.advfredericoferreira.com {
+	# www -> raiz
+	redir https://advfredericoferreira.com{uri} permanent
+
+	reverse_proxy app:3000
+
+	encode gzip zstd
+
+	header {
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy strict-origin-when-cross-origin
+		Permissions-Policy geolocation=(), microphone=(), camera=()
+		-Strict-Transport-Security
+	}
+}
+
+# Strict-Transport-Security (HSTS) em bloco separado para incluir subdomínios,
+# só depois de confirmar que o HTTPS está funcionando.
+# advfredericoferreira.com, www.advfredericoferreira.com {
+# 	header Strict-Transport-Security "max-age=31536000; includeSubDomains"
+# }

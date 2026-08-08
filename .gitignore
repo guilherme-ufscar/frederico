@@ -1,0 +1,32 @@
+# Dependências — instaladas dentro do container / localmente
+node_modules
+.pnp
+.pnp.*
+
+# Build
+.next
+out
+dist
+
+# Cache e logs
+npm-debug.log*
+*.tsbuildinfo
+next-env.d.ts
+
+# Ambientes
+.env
+.env.local
+.env.*.local
+
+# Git
+.git
+
+# Testes
+coverage
+
+# Arquivos locais / mídia
+*.log
+.DS_Store
+Thumbs.db
+docker-compose.local.yml
+Caddyfile.local

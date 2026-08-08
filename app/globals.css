@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy-950: #0b1624;
+  --color-navy-900: #0f1e33;
+  --color-navy-800: #142740;
+  --color-navy-700: #1b3350;
+  --color-navy-600: #2a4368;
+  --color-gold-200: #f0e2c6;
+  --color-gold-300: #e2cba0;
+  --color-gold-400: #d1b27d;
+  --color-gold-500: #c0a268;
+  --color-gold-600: #a98a52;
+  --color-paper: #f8f6f1;
+  --color-paper-dim: #efebe2;
+  --color-ink: #1e2a38;
+  --color-ink-soft: #54637a;
+
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #f8f6f1;
+  --foreground: #1e2a38;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #d1b27d;
+  color: #0b1624;
+}
+
+/* Hairline utilitário */
+.hairline {
+  border-color: rgba(20, 39, 64, 0.12);
+}
+
+/* Grão sutil para seções escuras */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

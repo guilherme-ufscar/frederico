@@ -1,0 +1,45 @@
+# ─────────────────────────────────────────────────────────────
+# docker-compose.yml
+# Aplicação com TODAS as portas internas (expose, não publicadas).
+# Apenas o proxy Caddy publica portas no host.
+# ─────────────────────────────────────────────────────────────
+
+services:
+  app:
+    build: .
+    container_name: fc-advocacia-app
+    restart: unless-stopped
+    # Porta 3000 visível apenas na rede interna do compose.
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      # TODO: preencher no .env quando o envio de e-mail for integrado
+      # - RESEND_API_KEY=${RESEND_API_KEY}
+    networks:
+      - internal
+
+  proxy:
+    image: caddy:2-alpine
+    container_name: fc-advocacia-proxy
+    restart: unless-stopped
+    # Única frente pública: 80 (redireciona p/ HTTPS) e 443 (HTTPS).
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+
+volumes:
+  caddy_data:
+  caddy_config:
