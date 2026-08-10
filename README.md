@@ -32,13 +32,17 @@ A aplicação não expõe porta nenhuma; apenas o proxy Caddy é publicado (80/4
 ```bash
 docker compose up -d --build          # produção (80/443, HTTPS automático)
 docker compose -f docker-compose.yml -f docker-compose.local.yml up -d --build  # preview local (8080, só HTTP)
+docker compose -f docker-compose.prod.yml up -d --build  # servidor aaPanel (nginx na 80/443 faz proxy p/ 127.0.0.1:3000)
 ```
 
 - `docker-compose.yml` — app (porta 3000 interna, `expose` apenas) + proxy Caddy
 - `docker-compose.local.yml` — override de desenvolvimento: só porta 8080, Caddyfile.local (sem Let's Encrypt)
+- `docker-compose.prod.yml` — servidor com nginx externo: app publicado em 127.0.0.1:3000 (só localhost)
 - `Dockerfile` — multi-stage (build em node:22-alpine, runtime standalone)
 - `Caddyfile` — HTTPS automático (Let's Encrypt), headers de segurança
 - `.dockerignore` — impede que node_modules do Windows quebre o build Linux
+
+**Deploy no servidor (aaPanel):** `scripts/deploy.py` — backup do site antigo, envio dos arquivos, `docker compose up`, ajuste do vhost do domínio (proxy reverso) com backup automático do `.conf` e reversão em caso de falha do `nginx -t`.
 
 **Antes do deploy:** apontar o DNS de `advfredericoferreira.com` para o servidor.
 

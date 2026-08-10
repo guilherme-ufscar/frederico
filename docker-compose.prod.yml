@@ -1,0 +1,19 @@
+# docker-compose.prod.yml — usado NO SERVIDOR de produção
+# O nginx do aaPanel (80/443, com SSL) faz proxy reverso para o app.
+# Porta 3000 publicada APENAS em 127.0.0.1 (localhost) — não acessível de fora.
+
+services:
+  app:
+    build: .
+    container_name: fc-advocacia-app
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"   # única porta publicada — só localhost (nginx acessa)
+    environment:
+      - NODE_ENV=production
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
