@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description:
-    "Política de privacidade do Federico Ferreira Advocacia, em conformidade com a LGPD (Lei nº 13.709/2018).",
+    "Política de privacidade do Frederico Ferreira Advocacia, em conformidade com a LGPD (Lei nº 13.709/2018).",
   robots: { index: false, follow: true },
 };
 

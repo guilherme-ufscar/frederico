@@ -20,8 +20,8 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL("https://advfredericoferreira.com"),
   title: {
-    default: "Federico Ferreira Advocacia | Direito Previdenciário, Trabalhista e Empresarial",
-    template: "%s | Federico Ferreira Advocacia",
+    default: "Frederico Ferreira Advocacia | Direito Previdenciário, Trabalhista e Empresarial",
+    template: "%s | Frederico Ferreira Advocacia",
   },
   description:
     "Advocacia de tese firme e linguagem clara. Atuação em Direito Previdenciário, Trabalhista e Empresarial — análise honesta do seu caso e comunicação sem juridiquês.",
@@ -33,12 +33,12 @@ export const metadata: Metadata = {
     "revisão de benefício INSS",
     "reclamação trabalhista",
   ],
-  authors: [{ name: "Federico Ferreira Advocacia" }],
+  authors: [{ name: "Frederico Ferreira Advocacia" }],
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    siteName: "Federico Ferreira Advocacia",
-    title: "Federico Ferreira Advocacia",
+    siteName: "Frederico Ferreira Advocacia",
+    title: "Frederico Ferreira Advocacia",
     description:
       "Do outro lado da mesa, ninguém vai defender você. É exatamente para isso que existimos.",
   },

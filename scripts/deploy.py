@@ -1,4 +1,4 @@
-"""Deploy do projeto Federico Ferreira no servidor 86.48.20.18.
+"""Deploy do projeto Frederico Ferreira no servidor 86.48.20.18.
 
 Passos:
 1. Backup do site antigo -> /www/wwwroot/frederico_legado
@@ -10,7 +10,7 @@ Passos:
 import paramiko, os, sys
 
 HOST, USER, PASS = "86.48.20.18", "root", "CoderMaster2026"
-LOCAL = r"E:\coder\advfrederico"
+LOCAL = r"C:\Users\Chyi Jaan Li\Desktop\frederico"
 REMOTE = "/www/wwwroot/frederico"
 
 # Arquivos a enviar (código + docker; node_modules/.next build dentro do container)

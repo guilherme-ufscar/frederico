@@ -30,3 +30,5 @@ coverage
 Thumbs.db
 docker-compose.local.yml
 Caddyfile.local
+prev.pdf
+imagensnova/

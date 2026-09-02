@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "O Escritório",
   description:
-    "Conheça o Federico Ferreira Advocacia: princípios, trajetória e a forma de trabalhar — clareza antes de tudo, honestidade sobre expectativa e presença constante.",
+    "Conheça o Frederico Ferreira Advocacia: princípios, trajetória e a forma de trabalhar — clareza antes de tudo, honestidade sobre expectativa e presença constante.",
 };
 
 const principios = [
@@ -62,8 +62,8 @@ export default function EscritorioPage() {
                     <div className="grain relative overflow-hidden rounded-lg bg-navy-800">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src="/foto-federico.webp"
-                        alt="Federico Ferreira, advogado — retrato profissional"
+                        src="/foto-frederico.webp"
+                        alt="Frederico Ferreira, advogado — retrato profissional"
                         className="aspect-[4/5] w-full object-cover"
                         width={800}
                         height={1000}
@@ -102,18 +102,19 @@ export default function EscritorioPage() {
               {/* Coluna de conteúdo */}
               <div className="md:col-span-7">
                 <Reveal>
-                  {/* TODO: escrever a trajetória real com o cliente */}
                   <p className="text-xl leading-relaxed text-navy-900 md:text-2xl">
-                    Federico Ferreira construiu o escritório em torno de uma
+                    Frederico Ferreira construiu o escritório em torno de uma
                     convicção simples: o direito existe para proteger pessoas —
                     e ele só cumpre esse papel quando quem o procura entende o
                     que está acontecendo.
                   </p>
                   <p className="mt-6 text-base leading-relaxed text-ink-soft">
                     Com atuação dedicada em Direito Previdenciário, Trabalhista
-                    e Empresarial, o escritório une técnica de quem conhece o
-                    processo por dentro à comunicação direta de quem respeita o
-                    tempo e a ansiedade de quem procura um advogado.
+                    e Empresarial e atendimento em Rio Grande/RS e online, o
+                    escritório une técnica de quem conhece o processo por
+                    dentro à comunicação direta — sem juridiquês e sem promessa
+                    vazia. Foto em atualização; em breve, novo retrato
+                    profissional no site.
                   </p>
                 </Reveal>
 

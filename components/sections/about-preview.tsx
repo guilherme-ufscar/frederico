@@ -30,8 +30,8 @@ export function AboutPreview() {
               <div className="grain relative overflow-hidden rounded-lg bg-navy-800">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/foto-federico.webp"
-                  alt="Federico Ferreira, advogado — retrato profissional"
+                  src="/foto-frederico.webp"
+                  alt="Frederico Ferreira, advogado — retrato profissional"
                   className="aspect-[4/5] w-full object-cover"
                   width={800}
                   height={1000}

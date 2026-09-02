@@ -11,7 +11,7 @@ import { site, whatsappLink } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contato",
   description:
-    "Fale com o Federico Ferreira Advocacia. Primeira conversa sem compromisso: conte seu caso e receba uma análise honesta sobre caminhos e riscos.",
+    "Fale com o Frederico Ferreira Advocacia. Primeira conversa sem compromisso: conte seu caso e receba uma análise honesta sobre caminhos e riscos.",
 };
 
 export default function ContatoPage() {

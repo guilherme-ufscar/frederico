@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Federico Ferreira Advocacia — Direito Previdenciário, Trabalhista e Empresarial";
+export const alt = "Frederico Ferreira Advocacia — Direito Previdenciário, Trabalhista e Empresarial";
 export const dynamic = "force-static";
 
 export default function opengraphImage() {
@@ -23,7 +23,7 @@ export default function opengraphImage() {
         <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 16 }}>
           <div style={{ width: 40, height: 2, background: "#d1b27d" }} />
           <span style={{ fontSize: 22, letterSpacing: 8, color: "#d1b27d", textTransform: "uppercase" }}>
-            Federico Ferreira Advocacia
+            Frederico Ferreira Advocacia
           </span>
         </div>
 

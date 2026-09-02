@@ -106,17 +106,21 @@ export default async function AreaPage({ params }: Props) {
                     <h2 className="mt-6 font-display text-2xl font-medium text-navy-900">
                       {pub.titulo}
                     </h2>
-                    <p className="mt-3 text-[0.95rem] leading-relaxed text-ink-soft">
-                      {pub.descricao}
-                    </p>
-                    <ul className="mt-8 space-y-3">
-                      {pub.itens.map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-[0.95rem] text-ink">
-                          <span className="mt-2 inline-block h-1 w-3 shrink-0 bg-gold-500" aria-hidden />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    {pub.descricao ? (
+                      <p className="mt-3 text-[0.95rem] leading-relaxed text-ink-soft">
+                        {pub.descricao}
+                      </p>
+                    ) : null}
+                    {pub.itens.length > 0 ? (
+                      <ul className="mt-8 space-y-3">
+                        {pub.itens.map((item) => (
+                          <li key={item} className="flex items-start gap-3 text-[0.95rem] text-ink">
+                            <span className="mt-2 inline-block h-1 w-3 shrink-0 bg-gold-500" aria-hidden />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </div>
                 </Reveal>
               ))}

@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/politica-de-privacidade"],
+      disallow: ["/api/"],
     },
     sitemap: "https://advfredericoferreira.com/sitemap.xml",
   };
