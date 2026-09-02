@@ -113,6 +113,11 @@ def main():
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
         proxy_read_timeout 120s;
+        # Desativa cache para Next.js (evita paginas antigas presas em proxy_cache)
+        proxy_cache off;
+        proxy_no_cache 1;
+        proxy_cache_bypass 1;
+        add_header X-Cache-Status $upstream_cache_status always;
     }
 
     location ~ \\.well-known{
