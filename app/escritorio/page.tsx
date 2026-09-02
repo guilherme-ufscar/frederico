@@ -57,13 +57,13 @@ export default function EscritorioPage() {
               {/* Coluna sticky */}
               <div className="md:col-span-5">
                 <div className="md:sticky md:top-40">
-                  {/* Foto real do advogado */}
+                  {/* Fotos reais do advogado — novas imagens enviadas */}
                   <Reveal>
                     <div className="grain relative overflow-hidden rounded-lg bg-navy-800">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src="/foto-frederico.webp"
-                        alt="Frederico Ferreira, advogado — retrato profissional"
+                        alt="Frederico Ferreira, advogado — retrato profissional 1"
                         className="aspect-[4/5] w-full object-cover"
                         width={800}
                         height={1000}
@@ -76,6 +76,18 @@ export default function EscritorioPage() {
                           Advogado · {site.oab}
                         </p>
                       </div>
+                    </div>
+                  </Reveal>
+                  <Reveal delay={0.04}>
+                    <div className="mt-4 overflow-hidden rounded-lg border border-navy-800/10">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="/foto-frederico-2.webp"
+                        alt="Frederico Ferreira, advogado — retrato profissional 2"
+                        className="aspect-[4/5] w-full object-cover"
+                        width={800}
+                        height={1000}
+                      />
                     </div>
                   </Reveal>
                   <Reveal delay={0.08}>
@@ -110,11 +122,11 @@ export default function EscritorioPage() {
                   </p>
                   <p className="mt-6 text-base leading-relaxed text-ink-soft">
                     Com atuação dedicada em Direito Previdenciário, Trabalhista
-                    e Empresarial e atendimento em Rio Grande/RS e online, o
-                    escritório une técnica de quem conhece o processo por
+                    e Empresarial e atendimento presencial em Rio Grande/RS
+                    (Rua Canabarro, 470A — Centro) e online para todo o Brasil,
+                    o escritório une técnica de quem conhece o processo por
                     dentro à comunicação direta — sem juridiquês e sem promessa
-                    vazia. Foto em atualização; em breve, novo retrato
-                    profissional no site.
+                    vazia.
                   </p>
                 </Reveal>
 
